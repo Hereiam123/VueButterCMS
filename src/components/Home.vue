@@ -28,14 +28,7 @@
 
 <template>
   <div id="customer-page">
-    <figure>
-      <img :src="page.fields.hero_image">
-    </figure>
-    <h1>{{ page.fields.headline }}</h1>
-    <button>{{ page.fields.call_to_action }}</button>
-
-    <h3>Customers Love Us!</h3>
-    <!-- Loop over customer logos -->
-    <img v-for="logo in page.fields.customer_logos" :src="logo.logo_image">
+    <h1>{{ page.fields.first_name }}</h1>
+   <router-link :to="'/customers/'"><button> {{ page.fields.whats_the_day }}</button></router-link>
   </div>
 </template>
